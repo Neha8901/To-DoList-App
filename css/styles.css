@@ -1,12 +1,17 @@
 @charset "UTF-8";
 
+    body {
+        background: rgb(237, 240, 241);
+        padding-top: 100px;
+    }
+
 	body, input, button {
 		font-family: 'Roboto', sans-serif;
 	}
 
-	/*.noFill {
-		fill:none;
-	}*/
+	.nofill {
+		fill: none;
+	}
 
 	header {
 		width: 100%;
@@ -16,7 +21,7 @@
 		top: 0;
 		left: 0;
 		z-index: 5;
-		background: #25b99a;
+		background: rgb(37, 185, 154);
 		box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
 		border-bottom-right-radius: 10px;
 		border-bottom-left-radius: 10px;
@@ -59,7 +64,7 @@
 		right: 15px;
 		z-index: 2;
 		border-radius: 25px;
-		background: #fff;
+		background: rgb(255, 255, 255);
 		border: 0px;
 		box-shadow: none;
 		outline: none;
@@ -82,5 +87,127 @@
 	}
 
 	header button svg .fill {
-		fill: #25b99a;
+		fill: rgb(37, 185, 154);
 	}
+
+	.container {
+		width: 100%;
+		float: left;
+		padding: 15px;
+	}
+
+	ul.to-do-list {
+		width: 100%;
+		float: left;
+		list-style-type: none;
+	}
+
+	ul.to-do-list li {
+		width: 100%;
+		min-height: 50px;
+		float: left;
+		position: relative;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 20px;
+		color : rgb(68, 68, 68);
+		margin: 0 0 15px 0;
+		padding: 14px 100px 14px 14px;
+		border-radius: 5px;
+		box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+		background: rgb(255, 255, 255);
+	}
+
+	/*ul.to-do-list li:last-of-type {
+		margin: 0 	;
+	}*/
+
+	ul.to-do-list .buttons {
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 14px;
+	}
+
+	ul.to-do-list .buttons button {
+		width: 50px;
+		height: 50px;
+		float: left;
+		position: relative;
+		background: none;
+		border: 0px;
+		box-shadow: none;
+		outline: none;
+		cursor: pointer;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+	}
+
+	ul.to-do-list .buttons button:last-of-type:before {
+		content: '';
+		width: 1px;
+		height: 30px;
+		background: rgba(128, 128, 128, 0.2);
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+
+	ul.to-do-list .buttons button svg {
+		-webkit-transition: fill 0.2s ease;
+		-moz-transition: fill 0.2s ease;
+		-ms-transition: fill 0.2s ease;
+		-o-transition: fill 0.2s ease;
+		transition: fill 0.2s ease;
+	}
+
+	ul.to-do-list .buttons button svg {
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -11px 0 0 -11px;
+	}
+
+	ul.to-do-list li .buttons button.delete svg .fill {
+		fill: rgba(128, 128, 128, 0.75);
+	} 
+
+	ul.to-do-list li .buttons button.delete:hover svg .fill {
+		fill: rgb(255, 0, 0);
+	} 
+
+	ul.to-do-list li .buttons button.done svg {
+		border-radius: 11px;
+		border: 1.2px solid rgb(37, 185, 154);
+		transition: fill 0.2s ease;
+	}
+
+	ul.to-do-list#completed li .buttons button.done svg {
+		background: rgb(37, 185, 154);
+		border: 0;
+	} 
+
+	ul.to-do-list#completed li .buttons button.done svg .fill {
+		fill: rgb(255, 255, 255);
+	} 
+
+	ul.to-do-list:not(#completed) li .buttons button.done:hover svg {
+		background: rgba(37, 185, 154, 0.5);
+		border: 0;
+	} 
+
+	ul.to-do-list:not(#completed) li .buttons button.done:hover svg .fill {
+		fill: rgb(255, 255, 255);
+	} 
+
+	ul.to-do-list li .buttons button.done svg .fill {
+		fill: rgb(37, 185, 154);
+	} 
