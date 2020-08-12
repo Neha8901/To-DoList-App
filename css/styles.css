@@ -176,6 +176,24 @@
 		margin: -11px 0 0 -11px;
 	}
 
+	ul.to-do-list li .buttons button.done svg {
+		border-radius: 11px;
+		border: 1.2px solid rgb(37, 185, 154);
+		transition: fill 0.2s ease;
+	}
+
+	
+	ul.to-do-list li .buttons button.done svg {
+		border-radius: 11px;
+		border: 1.2px solid rgb(37, 185, 154);
+
+		-webkit-transition: fill 0.2s ease;
+		-moz-transition: fill 0.2s ease;
+		-ms-transition: fill 0.2s ease;
+		-o-transition: fill 0.2s ease;
+		transition: fill 0.2s ease;
+	}
+
 	ul.to-do-list li .buttons button.delete svg .fill {
 		fill: rgba(128, 128, 128, 0.75);
 	} 
@@ -184,30 +202,23 @@
 		fill: rgb(255, 0, 0);
 	} 
 
-	ul.to-do-list li .buttons button.done svg {
-		border-radius: 11px;
-		border: 1.2px solid rgb(37, 185, 154);
-		transition: fill 0.2s ease;
-	}
+	ul.to-do-list li .buttons button.done svg .fill {
+		fill: rgb(37, 185, 154);
+	} 
 
 	ul.to-do-list#completed li .buttons button.done svg {
 		background: rgb(37, 185, 154);
 		border: 0;
 	} 
 
-	ul.to-do-list#completed li .buttons button.done svg .fill {
-		fill: rgb(255, 255, 255);
-	} 
-
 	ul.to-do-list:not(#completed) li .buttons button.done:hover svg {
 		background: rgba(37, 185, 154, 0.5);
-		border: 0;
 	} 
 
 	ul.to-do-list:not(#completed) li .buttons button.done:hover svg .fill {
 		fill: rgb(255, 255, 255);
 	} 
 
-	ul.to-do-list li .buttons button.done svg .fill {
-		fill: rgb(37, 185, 154);
-	} 
+	ul.to-do-list#completed li .buttons button.done svg .fill {
+		fill: rgb(255, 255, 255);
+	}
